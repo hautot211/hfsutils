@@ -73,8 +73,8 @@ check :: all
 
 install ::
 	echo "INSTALLING libhfs.a"
-	$(LIBINSTALL) libhfs.a "$(LIBDEST)/"
-	$(LIBINSTALL) hfs.h "$(INCDEST)/"
+	$(LIBINSTALL) libhfs.a "$(LIBDEST)/libhfs.a"
+	$(LIBINSTALL) hfs.h "$(INCDEST)/hfs.h"
 
 again :: clean all
 
