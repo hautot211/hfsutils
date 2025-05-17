@@ -11,15 +11,6 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         
-        # Configuration du projet
-        repoUrl = "https://github.com/targetdisk/hfsutils.git";
-        repoRev = "9aeaf911d40d8f2abbfe5ca6db2d5b873bc149d2";
-        src = pkgs.fetchgit {
-          url = repoUrl;
-          rev = repoRev;
-          sha256 = "sha256-XGZRRTHhzjvfiOANzArPFnHyx6DvbT/JXaMOOgOhtGs="; # Mettre à jour après premier build
-        };
-        
         # Dépendances du projet
         buildInputs = with pkgs; [
           autoconf
@@ -33,7 +24,8 @@
         hfsutils = pkgs.stdenv.mkDerivation {
           pname = "hfsutils";
           version = "3.2.6";
-          inherit src buildInputs;
+          src = self;
+          inherit buildInputs;
           
           configurePhase = ''
             autoreconf
@@ -41,17 +33,12 @@
           '';
           
           buildPhase = ''
-            make install prefix=$out
-            cd libhfs
-            make install prefix=$out
+            make all_cli all_lib
           '';
 
-          #installPhase = ''
-          #  mkdir $out/lib
-          #  cp libhfs/libhfs.a $out/lib
-          #  cp libhfs/librsrc.a $out/lib
-          #  mkdir $out/include
-          #'';
+          installPhase = ''
+            make install_cli install_lib prefix=$out
+          '';
         };
       in {
         packages.default = hfsutils;

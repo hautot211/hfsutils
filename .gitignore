@@ -38,3 +38,6 @@ hvol
 *.swp
 *.swo
 Session.vim
+
+# Nix specific
+result

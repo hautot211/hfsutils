@@ -33,7 +33,7 @@ MANDEST =	@mandir@
 INCDEST =	@includedir@
 LIBDEST =	@libdir@
 
-INSTALL =	@INSTALL@
+INSTALL =	@INSTALL@ -D
 LIBINSTALL =	@INSTALL_DATA@
 SOFTLINK =	@LN_S@
 
@@ -72,7 +72,6 @@ check :: all
 	@echo "No self-tests available."
 
 install ::
-	echo "INSTALLING libhfs.a"
 	$(LIBINSTALL) libhfs.a "$(LIBDEST)/libhfs.a"
 	$(LIBINSTALL) hfs.h "$(INCDEST)/hfs.h"
 
