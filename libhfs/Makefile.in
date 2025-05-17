@@ -72,8 +72,9 @@ check :: all
 	@echo "No self-tests available."
 
 install ::
-	$(LIBINSTALL) libhfs.a "$(LIBDEST)/."
-	$(LIBINSTALL) hfs.h "$(INCDEST)/."
+	echo "INSTALLING libhfs.a"
+	$(LIBINSTALL) libhfs.a "$(LIBDEST)/"
+	$(LIBINSTALL) hfs.h "$(INCDEST)/"
 
 again :: clean all
 
