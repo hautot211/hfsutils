@@ -73,7 +73,8 @@ check :: all
 
 install ::
 	$(LIBINSTALL) libhfs.a "$(LIBDEST)/libhfs.a"
-	$(LIBINSTALL) hfs.h "$(INCDEST)/hfs.h"
+	mkdir -p "$(INCDEST)/hfs"
+	$(LIBINSTALL) {volume,medium,record,libhfs,os,node,version,hfs,data,low,file,block,apple,btree}.h "$(INCDEST)/hfs/"
 
 again :: clean all
 
