@@ -19,6 +19,9 @@
  * $Id: hfs.h,v 1.11 1998/11/02 22:09:01 rob Exp $
  */
 
+#ifndef HFS_H
+#define HFS_H
+
 # include <time.h>
 
 # define HFS_BLOCKSZ		512
@@ -178,3 +181,6 @@ int hfs_nparts(const char *);
 
 int hfs_format(const char *, int, int,
 	       const char *, unsigned int, const unsigned long []);
+
+#endif
+

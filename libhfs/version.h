@@ -19,8 +19,13 @@
  * $Id: version.h,v 1.6 1998/09/18 22:56:38 rob Exp $
  */
 
+#ifndef VERSION_H
+#define VERSION_H
+
 extern const char libhfs_rcsid[];
 
 extern const char libhfs_version[];
 extern const char libhfs_copyright[];
 extern const char libhfs_author[];
+
+#endif

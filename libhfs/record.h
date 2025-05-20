@@ -19,6 +19,9 @@
  * $Id: record.h,v 1.7 1998/11/02 22:09:08 rob Exp $
  */
 
+#ifndef RECORD_H
+#define RECORD_H
+
 void r_packcatkey(const CatKeyRec *, byte *, unsigned int *);
 void r_unpackcatkey(const byte *, CatKeyRec *);
 
@@ -45,3 +48,5 @@ void r_packextrec(const ExtKeyRec *, const ExtDataRec *,
 void r_packdirent(CatDataRec *, const hfsdirent *);
 void r_unpackdirent(unsigned long, const char *,
 		    const CatDataRec *, hfsdirent *);
+
+#endif

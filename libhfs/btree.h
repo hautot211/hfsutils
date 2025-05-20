@@ -19,6 +19,9 @@
  * $Id: btree.h,v 1.8 1998/11/02 22:08:55 rob Exp $
  */
 
+#ifndef BTREE_H
+#define BTREE_H
+
 int bt_getnode(node *, btree *, unsigned long);
 int bt_putnode(node *);
 
@@ -31,3 +34,6 @@ int bt_insert(btree *, const byte *, unsigned int);
 int bt_delete(btree *, const byte *);
 
 int bt_search(btree *, const byte *, node *);
+
+#endif
+

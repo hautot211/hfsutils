@@ -19,6 +19,9 @@
  * $Id: data.h,v 1.7 1998/11/02 22:08:58 rob Exp $
  */
 
+#ifndef DATA_H
+#define DATA_H
+
 extern const unsigned char hfs_charorder[];
 
   signed  char d_getsb(register const unsigned char *);
@@ -56,3 +59,6 @@ int d_relstring(const char *, const char *);
 
 time_t d_ltime(unsigned long);
 unsigned long d_mtime(time_t);
+
+#endif
+

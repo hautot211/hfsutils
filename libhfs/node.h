@@ -19,6 +19,9 @@
  * $Id: node.h,v 1.7 1998/11/02 22:09:06 rob Exp $
  */
 
+#ifndef NODE_H
+#define NODE_H
+
 void n_init(node *, btree *, int, int);
 
 int n_new(node *);
@@ -32,3 +35,5 @@ void n_insertx(node *, const byte *, unsigned int);
 int n_insert(node *, byte *, unsigned int *);
 
 int n_delete(node *, byte *, int *);
+
+#endif

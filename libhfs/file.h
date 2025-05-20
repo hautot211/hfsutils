@@ -19,6 +19,9 @@
  * $Id: file.h,v 1.6 1998/04/11 08:27:12 rob Exp $
  */
 
+#ifndef FILE_H
+#define FILE_H
+
 enum {
   fkData = 0x00,
   fkRsrc = 0xff
@@ -43,3 +46,6 @@ long f_alloc(hfsfile *);
 
 int f_trunc(hfsfile *);
 int f_flush(hfsfile *);
+
+#endif
+

@@ -19,6 +19,10 @@
  * $Id: block.h,v 1.10 1998/11/02 22:08:53 rob Exp $
  */
 
+#ifndef BLOCK_H
+#define BLOCK_H
+
+
 int b_init(hfsvol *);
 int b_flush(hfsvol *);
 int b_finish(hfsvol *);
@@ -38,3 +42,5 @@ unsigned long b_size(hfsvol *);
 void b_showstats(const bcache *);
 void b_dumpcache(const bcache *);
 # endif
+
+#endif

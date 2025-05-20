@@ -19,6 +19,9 @@
  * $Id: libhfs.h,v 1.7 1998/11/02 22:09:02 rob Exp $
  */
 
+#ifndef LIBHFS_H
+#define LIBHFS_H
+
 # include "hfs.h"
 # include "apple.h"
 
@@ -224,3 +227,6 @@ struct _hfsvol_ {
 # define HFS_VOL_OPT_MASK	0xff00
 
 extern hfsvol *hfs_mounts;
+
+#endif
+

@@ -19,6 +19,9 @@
  * $Id: apple.h,v 1.1 1998/04/11 08:27:11 rob Exp $
  */
 
+#ifndef APPLE_H
+#define APPLE_H
+
 typedef signed char	Char;
 typedef unsigned char	UChar;
 typedef signed char	SignedByte;
@@ -270,3 +273,6 @@ typedef struct {
   ULongInt	bthFree;	/* number of free nodes */
   SignedByte	bthResv[76];	/* reserved */
 } BTHdrRec;
+
+#endif
+

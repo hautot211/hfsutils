@@ -19,6 +19,9 @@
  * $Id: medium.h,v 1.3 1998/04/11 08:27:13 rob Exp $
  */
 
+#ifndef MEDIUM_H
+#define MEDIUM_H
+
 /*
  * Partition Types:
  *
@@ -40,3 +43,6 @@ int m_findpmentry(hfsvol *, const char *, Partition *, unsigned long *);
 int m_mkpart(hfsvol *, const char *, const char *, unsigned long);
 
 int m_zerobb(hfsvol *);
+
+#endif
+

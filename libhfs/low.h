@@ -19,6 +19,9 @@
  * $Id: low.h,v 1.6 1998/04/11 08:27:13 rob Exp $
  */
 
+#ifndef LOW_H
+#define LOW_H
+
 # define HFS_DDR_SIGWORD	0x4552
 
 # define HFS_PM_SIGWORD		0x504d
@@ -42,3 +45,6 @@ int l_putbb(hfsvol *, const BootBlkHdr *, const byte *);
 
 int l_getmdb(hfsvol *, MDB *, int);
 int l_putmdb(hfsvol *, const MDB *, int);
+
+#endif
+

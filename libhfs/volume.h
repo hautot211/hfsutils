@@ -19,6 +19,9 @@
  * $Id: volume.h,v 1.7 1998/11/02 22:09:12 rob Exp $
  */
 
+#ifndef VOLUME_H
+#define VOLUME_H
+
 void v_init(hfsvol *, int);
 
 int v_open(hfsvol *, const char *, int);
@@ -60,3 +63,6 @@ int v_adjvalence(hfsvol *, unsigned long, int, int);
 int v_mkdir(hfsvol *, unsigned long, const char *);
 
 int v_scavenge(hfsvol *);
+
+#endif
+
