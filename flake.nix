@@ -44,7 +44,7 @@
         packages.default = hfsutils;
         
         devShells.default = pkgs.mkShell {
-          packages = buildInputs;
+          packages = buildInputs ++ [ hfsutils ];
           inputsFrom = [ hfsutils ];
         };
       });
