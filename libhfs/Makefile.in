@@ -74,7 +74,20 @@ check :: all
 install ::
 	$(LIBINSTALL) libhfs.a "$(LIBDEST)/libhfs.a"
 	mkdir -p "$(INCDEST)/hfs"
-	$(LIBINSTALL) {volume,medium,record,libhfs,os,node,version,hfs,data,low,file,block,apple,btree}.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) volume.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) medium.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) record.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) libhfs.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) os.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) node.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) version.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) hfs.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) data.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) low.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) file.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) block.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) apple.h "$(INCDEST)/hfs/"
+	$(LIBINSTALL) btree.h "$(INCDEST)/hfs/"
 
 again :: clean all
 
