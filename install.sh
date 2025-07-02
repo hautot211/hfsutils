@@ -7,7 +7,7 @@ sudo apt update
 # Installing build dependencies
 sudo apt install autoconf build-essential -y
 # Configuring
-autoreconf
+autoreconf --install
 ./configure
 # Building
 make all_lib
